@@ -5,8 +5,11 @@ function maxMatch(string) {
    let objWithWords = {};
    let wordsArr = string.replace(/(,|\.)/g, '').split(' ');
    for (let i = 0; i < wordsArr.length; i++) {
-      if(!objWithWords[wordsArr[i]])objWithWords[wordsArr[i]] = 1
-      objWithWords[wordsArr[i]]++;
+      if (!objWithWords[wordsArr[i]]) {
+         objWithWords[wordsArr[i]] = 1
+      } else {
+         objWithWords[wordsArr[i]]++
+      };
    }
    maxMatchWord = ''
    wordCounter = 0;
@@ -18,3 +21,4 @@ function maxMatch(string) {
    }
    return maxMatchWord;
 }
+console.log(maxMatch(paragraph));

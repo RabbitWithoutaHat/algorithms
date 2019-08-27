@@ -6,7 +6,7 @@ function arraySum(numbers, target) {
       let firstNumber = numbers[i];
       let secondNumber = target - firstNumber;
       for (let j = 0; j < numbers.length; j++) {
-         if (numbers[i] === numbers[j]) {
+         if (i === j) {
             continue
          }
          if (numbers[j] === secondNumber) {
